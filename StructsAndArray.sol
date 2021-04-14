@@ -1,4 +1,4 @@
-pragma solidity 0.8.3; 
+pragma solidity ^0.8.3; 
 
 contract StructsAndArrays {
 
@@ -17,11 +17,12 @@ contract StructsAndArrays {
         // Add that person to the Array:
         people.push(satoshi);
         people.push(Person(16, "Vitalik"));
+        people.push(Person(17, _name));
 
-        uint[] numbers;
-        numbers.push(5);
-        numbers.push(10);
-        numbers.push(15);
+        uint[] memory numbers;
+        numbers[0] = 5;
+        numbers[1] = 10;
+        numbers[2] = _dna;
         // numbers is now equal to [5, 10, 15]
     }
 }
